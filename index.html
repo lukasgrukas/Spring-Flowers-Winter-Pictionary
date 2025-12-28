@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Montagsmaler Wortgenerator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    #word {
+      font-size: 2em;
+      margin: 30px;
+      font-weight: bold;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Spring Flowers Winter Pictionary</h1>
+  <div id="word">Drücke auf den Button</div>
+  <button onclick="generateWord()">Neues Wort</button>
+
+  <script>
+    const words = [
+      "Blume",
+      "Ei",
+      "Toast",
+      "Ananas",
+      "Vogel",
+      "Birne"
+    ];
+
+    function generateWord() {
+      const randomIndex = Math.floor(Math.random() * words.length);
+      document.getElementById("word").textContent = words[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
